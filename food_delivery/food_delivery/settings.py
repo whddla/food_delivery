@@ -56,8 +56,9 @@ ROOT_URLCONF = 'food_delivery.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'food_delivery/templates'),
-
+        'DIRS': [
+            os.path.join(BASE_DIR,'food_delivery/templates'),
+            os.path.join(BASE_DIR,'member/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,3 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'food_delivery/static'),
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
