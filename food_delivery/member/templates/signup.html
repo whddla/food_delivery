@@ -1,0 +1,59 @@
+!{% extends 'layout/layout.html' %}
+{%load static%}
+{%block title%}회원가입{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<div class="signup-container">
+    <form action="" class="account-wrap">
+        <h2 class="account-title">회원가입</h2>
+        <div class="account-content">
+            <ul class="form-list"> 
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="loginId">아이디</label>
+                        <input maxlength="20" type="text" name="loginId"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="loginPw">비밀번호</label>
+                        <input type="password" name="loginPw"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="label" for="loginPwCheck">비밀번호 확인</label>
+                        <input type="password" name="loginPwCheck"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="name">이름</label>
+                        <input type="text" name="name"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="birth">생년월일</label>
+                        <input type="datetime" name="birth"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="phone">휴대폰 번호</label>
+                        <input type="tel" name="phone"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label class="label" for="address">주소</label>
+                        <input type="text" name="address"/>
+                    </div>
+                </li>
+            </ul>
+            <div class="check-box"></div>
+        </div>
+        <footer class="btn-group">
+            <button class="bt-large">회원가입</button>
+        </footer>
+    </form>
+</div>
+{%endblock%}
