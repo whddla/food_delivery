@@ -4,24 +4,23 @@
 {%block content%}
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 <div class="login-container">
-    <form action="" class="account-wrap">
+    <form action="." method="POST" class="account-wrap">
+        {% csrf_token %}
         <h2 class="account-title">로그인</h2>
         <div class="account-content">
             <ul class="form-list"> 
+                {% for field in form %}
                 <li>
                     <div class="input-box">
-                        <label class="label" for="loginId">아이디</label>
-                        <input maxlength="20" type="text" name="loginId"/>
+                        <label class="label" for="{{field.id_for_label}}">{{field.label}}</label>
+                        <input type="{{field.field.widget.input_type}}" name="{{field.name}}" id="{{field.id_for_label}}">
                     </div>
-                    <!-- <p class="text-valid">아이디를 입력해주세요.</p> -->
+                    <p class="text-valid">{{field.error_messages}}</p>
                 </li>
-                <li>
-                    <div class="input-box">
-                        <label class="label" for="loginPw">비밀번호</label>
-                        <input type="password" name="loginPw"/>
-                    </div>
-                    <!-- <p class="text-valid">비밀번호를 입력해주세요.</p> -->
-                </li>
+                {%if field.errors%}
+                <span style="color: red">{{field.errors}}</span>
+                {%endif%}
+                {%endfor%}
             </ul>
             <div class="check-box"></div>
         </div>

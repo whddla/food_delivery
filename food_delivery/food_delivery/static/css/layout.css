@@ -27,6 +27,10 @@ a{
     width: 141px;
 }
 
+.login a:first-child{
+    margin-right: 15px;
+}
+
 .addr {
 }
 

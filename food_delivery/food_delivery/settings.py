@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'food_delivery',
-    'rest_framework',
+    'food_delivery','ceo','member','order',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +58,8 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR,'food_delivery/templates'),
             os.path.join(BASE_DIR,'member/templates'),
+            os.path.join(BASE_DIR,'order/templates'),
+            os.path.join(BASE_DIR,'ceo/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -132,6 +133,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'food_delivery/static'),
     os.path.join(BASE_DIR, 'member/static'),
+    os.path.join(BASE_DIR, 'ceo/static'),
+    os.path.join(BASE_DIR, 'order/static'),
 ]
 
 MEDIA_URL = '/media/'

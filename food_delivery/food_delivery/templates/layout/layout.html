@@ -22,10 +22,17 @@
             <input type="text" placeholder='주소입력'/>
             <button>주소검색</button>
         </div>
+        {%if request.session.login == None %}
         <div class='login'>
-            <a href="/member/login">로그인 |</a>
-            <a href="/member/signup"> 회원가입</a>
+            <a href="/member/login">로그인</a>
+            <a href="/member/signup">회원가입</a>
         </div>
+        {%else%}
+        <div class='login'>
+            <a href="/member/logout">로그아웃</a>
+            <a href="/member/signup">가게등록</a>
+        </div>
+        {%endif%}
     </div>
     {%block content%}
     {%endblock%}
