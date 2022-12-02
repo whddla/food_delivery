@@ -1,16 +1,15 @@
 from django import forms
 from food_delivery.models import User
-from django.contrib.auth.hashers import check_password
 
 
 class LoginForm(forms.Form):                                  
-    username = forms.CharField(                               
+    id = forms.CharField(                               
         error_messages={                                      
             'required': '아이디를 입력해주세요'
         },
         max_length=50, label="아이디")                     
     
-    password = forms.CharField(
+    pw = forms.CharField(
         error_messages={
             'required': '비밀번호를 입력해주세요'
         },
@@ -18,16 +17,17 @@ class LoginForm(forms.Form):
     
     def clean(self):                                           
         cleaned_data = super().clean()
-        username = cleaned_data.get('username')
-        password = cleaned_data.get('password')
+        id = cleaned_data.get('id')
+        pw = cleaned_data.get('pw')
 
-        if username and password :
+        if id and pw :
             try:
-                user = User.objects.get(id=username,pw=password)
-                if not check_password(password, user.pw):
-                    self.add_error('password', '비밀번호를 틀렸습니다.')     (7)
-                else:
-                    self.user_no = user.no                                 (8)
+                user = User.objects.get(id=id)
             except Exception:
-                self.add_error('username', '존재하지 않는 아이디 입니다.')
+                self.add_error('id', '존재하지 않는 아이디 입니다.')
+                return
+            if user.pw != pw:
+                self.add_error('pw', '비밀번호를 틀렸습니다.') 
 
+            else:
+                self.user_id = user.id  

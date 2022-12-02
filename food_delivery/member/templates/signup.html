@@ -1,10 +1,10 @@
-!{% extends 'layout/layout.html' %}
+{% extends 'layout/layout.html' %}
 {%load static%}
 {%block title%}회원가입{%endblock%}
 {%block content%}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 <div class="signup-container">
-    <form action="" class="account-wrap">
+    <form action="/member/signupCheck" method="POST" class="account-wrap">
         <h2 class="account-title">회원가입</h2>
         <div class="account-content">
             <ul class="form-list"> 
