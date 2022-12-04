@@ -32,4 +32,7 @@ def signup(request):
 
 
 def signupCheck(request):
+    id = request.get['loginId']
+    pw = request.get['loginPw']
+    
     return redirect('/')
