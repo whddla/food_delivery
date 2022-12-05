@@ -1,7 +1,6 @@
 from django import forms
 from food_delivery.models import User
 
-
 class LoginForm(forms.Form):                                  
     id = forms.CharField(                               
         error_messages={                                      
@@ -30,4 +29,4 @@ class LoginForm(forms.Form):
                 self.add_error('pw', '비밀번호를 틀렸습니다.') 
 
             else:
-                self.user_id = user.id  
+                self.user_id = user.id 
