@@ -29,7 +29,11 @@ def logout(request):
 def signup(request):
     return render(request, 'signup.html')   
 
+def findId(request):
+    return render(request, 'findId.html')   
 
+def findPw(request):
+    return render(request, 'findPw.html')   
 
 def signupCheck(request):
     id = request.get['loginId']
