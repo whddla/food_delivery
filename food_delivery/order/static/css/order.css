@@ -1,0 +1,98 @@
+.container{
+    padding-top: 50px;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.left-tab{
+    width: 60%;
+}
+
+.right-tab{
+    margin-left: 15px;
+    width: 40%;
+    border-left: 1px solid #d9d9d9;
+    padding-left: 15px;
+}
+
+/* 가게명 */
+.store{
+    border: 1px solid #d9d9d9;
+}
+
+
+/* 탭 버튼 */
+.active {
+    display: block;
+}
+
+.content {
+    display: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: none;
+    padding: 30px 16px 0 16px;
+}
+
+.tab_box {
+    width: 100%;
+    margin-top: 30px;
+	display: flex;
+	font-size: 25px;
+}
+
+.tab_box .active {
+    color: #e54c1fbd;
+    border-bottom: 2px solid #ff4e00;
+}
+
+.tabs{
+    width: 100%;
+}
+
+button{
+    border: 1px solid #ddd;
+    background: none;
+}
+
+
+/* 메뉴 탭 css */
+.menu-item{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu-item table{
+    width: 100%;
+}
+
+.menu-item table td{
+    padding-left: 33px;
+}
+
+/* 정보 탭 */
+.title{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    padding: 0 0 7px 20px;
+    margin-bottom: 18px;
+    background-size: 16px;
+}
+
+.info-icon{
+    background: url("https://www.yogiyo.co.kr/mobile/image/ic_owner_notice@3x.png?v=c07d7dfbeb15af2680dacd1ec31b503aa6ba7ce5")no-repeat 0 1px;
+    background-size: 18px;
+}
+
+/* 리뷰 탭 */
+.count {
+    padding: 16px;
+}
+
+.review{
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}

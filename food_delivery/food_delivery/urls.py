@@ -23,4 +23,5 @@ urlpatterns = [
     path('',views.index),
     path('cate',views.cate),
     path('member/',include('member.urls')),
+    path('order/',include('order.urls')),
 ]
