@@ -19,16 +19,35 @@ a{
     justify-content: space-around;
     font-family: 'Inter', sans-serif;
     background-color: white;
-    border-bottom: 1px solid #ddd;
     padding-top: 5px;
+}
+
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .logo>a>img {
     width: 141px;
 }
 
-.login a:first-child{
-    margin-right: 15px;
+.login ul{
+    display: flex;
+}
+
+.login li:before {
+    width: 1px;
+    height: 14px;
+    margin: 0 20px;
+    background-color: #DDD;
+    display: inline-block;
+    content: '';
+    margin-right: 10px;
+}
+
+.login li:first-child::before {
+    display: none;
 }
 
 .addr {
