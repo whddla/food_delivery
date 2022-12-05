@@ -32,12 +32,19 @@
     margin-top: 0 !important;
 }
 
-.form-list > li {
-    margin-top: 14px;
-}
+
 
 .input-box {
     position: relative;
+    margin-top: 15px;
+    width: 100%;
+    padding: 0;
+    margin-left: 0px;
+    height: 62px;
+    /* padding-left: 20px; */
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    transition: .2s ease padding, .3s ease border;
 }
 
 .input-box.error .label, .input-box.error .inform {
@@ -56,20 +63,19 @@
     transition: .2s ease opacity, .2s ease top;
 }
 
-input, textarea, label, button {
-    color: #000;
-    vertical-align: middle;
-    border-radius: 0;
-    outline: none;
+
+input,button{
+    padding: 0;
+    margin: 0;
 }
 
-.input-box:not(input) input {
-    width: 100%;
-    height: 62px;
-    /* padding: 22px 20px; */
-    border: 1px solid #DDD;
-    border-radius: 6px;
-    transition: .2s ease padding, .3s ease border;
+.input-box input{
+    border: none;
+    outline: none;
+    width: 95%;
+    border-radius: 10px;
+    height: 100%;
+    padding-left: 20px;
 }
 
 dl, ul, ol, menu, li {
@@ -100,4 +106,30 @@ dl, ul, ol, menu, li {
 
 .bt-large:first-child {
     margin-left: 0;
+}
+
+.bt-large{
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 62px;
+    cursor: pointer;
+}
+
+.nav-text li:before {
+    width: 1px;
+    height: 14px;
+    margin: 0 20px;
+    background-color: #DDD;
+    display: inline-block;
+    content: '';
+}
+
+.nav-text li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-text li:first-child::before {
+    display: none;
 }

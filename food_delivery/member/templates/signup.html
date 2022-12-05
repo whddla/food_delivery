@@ -26,8 +26,27 @@
                 </li>
                 <li>
                     <div class="input-box">
+                        <label class="label" for="email">이메일</label>
+                        <input maxlength="20" type="email" name="email"/>
+                    </div>
+                    <ul class="cautions-dotted">
+                        <li>아이디/비밀번호 찾기에 활용되므로 정확하게 입력해주세요.</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="input-box">
                         <label class="label" for="name">이름</label>
                         <input type="text" name="name"/>
+                    </div>
+                    <div class="input-box" style="display: flex;">
+                        <label class="label" for="phone">휴대폰 번호</label>
+                        <input type="tel" name="phone"/>
+                        <button class="code-btn" type="button">인증번호</button>
+                    </div>
+                    <div class="input-box" style="display: flex;">
+                        <label class="label" for="code">인증번호</label>
+                        <input type="text" name="code"/>
+                        <button class="code-btn" type="button">인증</button>
                     </div>
                 </li>
                 <li>
@@ -35,12 +54,10 @@
                         <label class="label" for="birth">생년월일</label>
                         <input type="datetime" name="birth"/>
                     </div>
-                </li>
-                <li>
-                    <div class="input-box">
-                        <label class="label" for="phone">휴대폰 번호</label>
-                        <input type="tel" name="phone"/>
-                    </div>
+                    <ul class="cautions-dotted">
+                        <li>생일을 정확하게 입력해주세요.(예 : 2000-12-31)</li>
+                        <li>만 14세 이상만 회원가입이 가능합니다.</li>
+                    </ul>
                 </li>
                 <li>
                     <div class="input-box">
