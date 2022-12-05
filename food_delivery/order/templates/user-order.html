@@ -76,12 +76,93 @@
     <div class="right-tab">
         <form action="" method="post">
             <div class="order-menu">
-
+                <div>
+                    <div class="order-title"><h3>주문표</h3></div>
+                    <div>
+                        <!-- 주문표 -->
+                        <ul>
+                            <li class="item-list">
+                                <div>
+                                    <div class="item-name">김치볶음밥</div>
+                                    <div class="pull-left">
+                                        <a class="delete-btn" href="">
+                                            삭제
+                                            <span>10,000원</span>
+                                        </a>
+                                        <div class="text-right">- 1 +</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div>
+                                    <div class="item-name">김치볶음밥</div>
+                                    <div class="pull-left">
+                                        <a class="delete-btn" href="">
+                                            삭제
+                                            <span>10,000원</span>
+                                        </a>
+                                        <div class="text-right">- 1 +</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- 주문표 -->
+                    </div>
+                </div>
             </div>
-            <div class="pay-view"></div>
-            <div class="request-menu"></div>
+            <div class="pay-view">
+                <div>
+                    <div class="pay-view-title"><h3>결제금액</h3></div>
+                </div>
+                <div class="pay-money">
+                    <table>
+                        <tr>
+                            <td>음식</td>
+                            <td>20,000원</td>
+                        </tr>
+                        <tr>
+                            <td>배달비</td>
+                            <td>2,000원</td>
+                        </tr>
+                        <tr>
+                            <td><strong>총 금액</strong></td>
+                            <td><strong>22,000원</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="request-menu">
+                <div>
+                    <div class="request-title"><h3>요청사항</h3></div>
+                </div>
+                <div class="request">
+                    <div class="input-box">
+                        주소 <input type="text" disabled value="경기 의정부시 오목로 251" style="background: none;border: none;">
+                    </div>
+                    <div class="input-box">
+                        상세주소 <input type="text"style="background: none;outline: none;">
+                    </div>
+                    <div class="input-box">
+                        <span>요청사항(사장님께)</span>
+                        <input type="text" style="background: none;outline: none;">
+                    </div>
+                    <div class="input-box">
+                        <span>요청사항(배달기사님께)</span>
+                        <input type="text" style="background: none;outline: none;">
+                    </div>
+                    <div class="input-box">
+                        <span>결제방법</span>
+                        <select name="" id="" style="width: 100%; height: 30px; margin-top: 5px;">
+                            <option value="none">선택</option>
+                            <option value="1">만나서 현금결제</option>
+                            <option value="2">만나서 카드결제</option>
+                            <option value="3">카드결제</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="pay-menu">
-                <button>결제하기</button>
+                <button class="pay-btn">결제하기</button>
             </div>
         </form>
     </div>

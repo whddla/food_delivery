@@ -40,3 +40,7 @@ def signupCheck(request):
     pw = request.get['loginPw']
     
     return redirect('/')
+
+
+def myOrder(request):
+    return render(request, 'myOrder.html')   
