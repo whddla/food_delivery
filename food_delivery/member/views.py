@@ -44,3 +44,6 @@ def signupCheck(request):
 
 def myOrder(request):
     return render(request, 'myOrder.html')   
+
+def register(request):
+    return render(request, 'register.html')   

@@ -24,4 +24,5 @@ urlpatterns = [
     path('cate',views.cate),
     path('member/',include('member.urls')),
     path('order/',include('order.urls')),
+    path('ceo/',include('ceo.urls')),
 ]
